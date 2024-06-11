@@ -1,5 +1,6 @@
 ## Description
-    Delete the images that are not imported in your project.
+    Delete the images and media file that are not imported in your project.
+    .jpg .png .jpeg .mp3 .wav
 ### Before
 - src
     - assets
@@ -47,13 +48,13 @@ npm i clean-assets-master
 ### .package.json
 ```json
 "scripts": {
-    "clean:assets": "node node_modules/clean-assets-master/index.js pathImage pathSource",
+    "clean:assets": "node node_modules/clean-assets-master/index.js pathImage pathSource"
 }
 ```
 ### Example
 ```json
 "scripts": {
-    "clean:assets": "node node_modules/clean-assets-master/index.js src/assets src",
+    "clean:assets": "node node_modules/clean-assets-master/index.js src/assets src"
 }
 ```
 ## Run script

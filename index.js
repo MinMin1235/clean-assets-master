@@ -66,7 +66,7 @@ async function deleteFilesIfNotReferenced(files, directoryRoot) {
             const textSearch = parentFolder + fileFormat.split(parentFolder)[1];
             const result = await searchFiles(directoryRoot, textSearch);
             ;
-            if (result.length === 0 && ["JPG", "PNG", "JPEG"].includes(file.split(".")[1].toUpperCase())) {
+            if (result.length === 0 && ["JPG", "PNG", "JPEG", "MP3", "WAV"].includes(file.split(".")[1].toUpperCase())) {
                 const pathAssets = path.join(__dirname, file).replace('/node_modules/clean-assets-master', '');
                 await fs.promises.unlink(pathAssets);
                 totalFileDelete++;
@@ -119,7 +119,7 @@ async function main() {
             process.stdout.cursorTo(0); // Di chuyển con trỏ về đầu dòng
             process.stdout.write(waringColor + `${currentFile}\nStarting the process ${Math.ceil(percentComplete)}%`); // In thông báo với dấu chấm
             index = (index + 1) % dots.length; // Chuyển sang ký tự dấu chấm tiếp theo
-        }, 10); // Thay đổi tốc độ hiển thị dấu chấm tại đây nếu cần
+        }, 100); // Thay đổi tốc độ hiển thị dấu chấm tại đây nếu cần
 
         const files = await findFiles(imageFolder);
         totalFiles = files.length;

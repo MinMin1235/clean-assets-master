@@ -1,6 +1,6 @@
 {
   "name": "clean-assets-master",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Delete the images that are not imported in your project.",
   "main": "index.js",
   "scripts": {
