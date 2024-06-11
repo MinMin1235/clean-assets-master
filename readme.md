@@ -1,16 +1,17 @@
-## Rename and move icon
-### From
+## Description
+    Delete the images that are not imported in your project.
+### Before
 - src
     - assets
         - icons
             - file1.png
             - file1@2x.png
             - file1@3x.png
-            - unimportable.png
-            - unimportable@2x.png
-            - unimportable@3x.png
-    components
-        Example.tsx
+            - unimportable.png  <!-- This file will be deleted after cleaning as it is not imported 
+            - unimportable@2x.png  <!-- This file will be deleted after cleaning as it is not imported
+            - unimportable@3x.png  <!-- This file will be deleted after cleaning as it is not imported
+    - components
+        - Example.tsx
 - package.json
 
 ### Example.tsx
@@ -23,6 +24,9 @@
             - file1.png
             - file1@2x.png
             - file1@3x.png
+            - unimportable.png  <!--this file deleted 
+            - unimportable@2x.png  <!--this file deleted 
+            - unimportable@3x.png  <!--this file deleted 
 ## Example
 
 <video width="320" height="240" controls>
@@ -30,6 +34,7 @@
   Your browser does not support the video tag.
 </video>
 
+![Alt text](image1.png)![Alt text](image2.png)
 [Click để xem demo](https://streamable.com/m9wrym)
 
 ## Install
